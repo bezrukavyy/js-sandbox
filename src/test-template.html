@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test Template</title>
+    <script src="jquery-3.4.1.js" charset="utf-8"></script>
+    <script src="jquery.tmpl.js" charset="utf-8"></script>
+    <script src="helper.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="above">above</div>
+    <div id="templateContainer"></div>
+    <div id="below">below</div>
+    <script id="testTemplate" type="text/x-jQuery-tmpl">
+      <div>
+          date: ${date}
+      </div>
+    </script>
+    <script type="text/javascript">
+      var element = $("#testTemplate").tmpl(helper)
+      $("#templateContainer").append(element)
+    </script>
+  </body>
+</html>
